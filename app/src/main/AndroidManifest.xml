@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.xue" >
+    package="com.example.android.xue">
 
     <application
         android:allowBackup="true"
@@ -8,14 +8,25 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity" >
+        android:theme="@style/AppTheme">
+        <activity android:name=".Base.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".AOP.LoginActivity" />
+        <activity android:name=".AOP.MemberActivity" />
+        <activity android:name=".Notification.JumpActivity"/>
+        <activity android:name=".Notification.NotificationActivity"/>
+        <receiver android:name=".Notification.NotificationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.example.android.xue.click"/>
+                <action android:name="com.example.android.xue.cancel"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
