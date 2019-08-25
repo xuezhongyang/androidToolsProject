@@ -1,82 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#111"
     tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/bt_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="手动发送一个通知" />
+
     <TextView
-        android:id="@+id/harvest5_user_center_name_tv"
+        android:id="@+id/tv_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:ellipsize="end"
-        android:text="111111111111111"
-        android:textColor="#ffffffff"
-        android:textSize="17sp" />
-
-
-    <RelativeLayout
+        android:text="显示数字"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/bt_notification"/>
+    <Button
+        android:id="@+id/bt_num"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/right_layout"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/harvest5_user_center_brief_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="221122222222222222122221122222222222222122221122222222222222122221122222222222222122221122222222222222122221"
-            android:textColor="#a6ffffff"
-            android:paddingRight="15dp"
-            android:textSize="12sp" />
-
-        <ImageView
-            android:id="@+id/iv_arrrow_closed"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:layout_marginBottom="3dp"
-            android:src="@mipmap/arrow_closed"
-            android:scaleType="center"
-           android:layout_alignParentRight="true"
-            android:layout_alignBottom="@+id/harvest5_user_center_brief_tv"
-            />
-    </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/right_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="12dp"
-        android:layout_alignTop="@+id/harvest5_user_center_name_tv"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/harvest5_user_center_subscribe_tv"
-            android:layout_width="63dp"
-            android:layout_height="28dp"
-            android:layout_marginTop="5dp"
-            android:background="@mipmap/ic_launcher"
-            android:gravity="center"
-            android:text="订阅"
-            android:textColor="#FFFFFF"
-            android:textSize="12sp"
-            />
-
-        <ImageView
-            android:id="@+id/harvest5_user_center_expand_recommend_iv"
-            android:layout_width="29dp"
-            android:layout_height="25dp"
-            android:layout_marginLeft="3dp"
-            android:layout_gravity="center_vertical"
-            android:padding="10dp"
-            android:visibility="gone"
-            android:src="@mipmap/ic_launcher" />
-    </LinearLayout>
-
+        android:layout_below="@+id/tv_num"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="计算时间"/>
 
 </RelativeLayout>
